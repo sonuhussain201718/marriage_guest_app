@@ -3,7 +3,8 @@ const { pool } = require("../config/db");
 // Get All Guests
 const getGuests = async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM marriage_db.guests where record_type_status NOT IN ('Inactive','inactive')");
+    // const result = await pool.query("SELECT * FROM marriage_db.guests where record_type_status NOT IN ('Inactive','inactive')");
+    const result = await pool.query("SELECT * FROM marriage_db.guests");
     res.json(result.rows);
   } catch (error) {
     res.status(500).json({ message: "Error fetching guests", error });

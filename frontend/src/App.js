@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import GuestList from './components/GuestList';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
     return (
